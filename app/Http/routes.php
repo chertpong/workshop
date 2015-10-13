@@ -19,6 +19,7 @@ Route::get('/home',function(){
 });
 
 Route::get('/contents', 'ContentController@index');
+Route::get('/contents/{id}','ContentController@show');
 
 
 
