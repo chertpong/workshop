@@ -17,7 +17,7 @@
                                 {!! substr(strip_tags($content->content),0,50).'...' !!}
                             </content>
                             <footer>
-                                <a href="{{url('content/'.$content->id)}}"><button class="btn btn-info pull-right">Read more</button></a>
+                                <a href="{{url('contents/'.$content->id)}}"><button class="btn btn-info pull-right">Read more</button></a>
                             </footer>
                         </div>
                     </article>
