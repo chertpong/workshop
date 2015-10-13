@@ -18,6 +18,16 @@ Route::get('/home',function(){
    return 'home';
 });
 
+Route::get('/contents', 'ContentController@index');
+
+
+
+
+
+
+
+
+
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
