@@ -5,6 +5,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <form class="form-horizontal" method="POST" action={{url('contents/'.$content->id.'/update')}}>
+                    <input type="hidden" name="_token" value={!! csrf_field() !!}>
                     <div class="form-group">
                         <label for="title">Title of content</label>
                         <input type="title" class="form-control" id="title" placeholder="Title" value={{$content->title}}>
