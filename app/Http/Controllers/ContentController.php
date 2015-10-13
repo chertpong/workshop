@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use App\Content;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use Log;
+use Auth;
 
 class ContentController extends Controller
 {
@@ -85,6 +86,8 @@ class ContentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Content::find($id)->delete();
+        Log::info('content id:'.$id.' is deleted by user id:'.Auth::user()->id);
+        return redirect('contents');
     }
 }

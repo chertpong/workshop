@@ -17,11 +17,11 @@ Route::get('/', function () {
 Route::get('/home',function(){
    return 'home';
 });
-
+//Content
 Route::get('/contents', 'ContentController@index');
 Route::get('/contents/{id}','ContentController@show');
 Route::get('/contents/{id}/edit',['middleware' => 'auth', 'uses'=>'ContentController@edit']);
-
+Route::delete('/contents/{id}/delete',['middleware' => 'auth','uses'=>'ContentController@destroy']);
 
 
 
