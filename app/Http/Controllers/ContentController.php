@@ -62,7 +62,7 @@ class ContentController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('contents.edit')->with('content',Content::find($id));
     }
 
     /**

@@ -20,6 +20,7 @@ Route::get('/home',function(){
 
 Route::get('/contents', 'ContentController@index');
 Route::get('/contents/{id}','ContentController@show');
+Route::get('/contents/{id}/edit',['middleware' => 'auth', 'uses'=>'ContentController@edit']);
 
 
 
