@@ -31,7 +31,7 @@ class ContentController extends Controller
      */
     public function create()
     {
-        //
+        return view('contents.create');
     }
 
     /**
