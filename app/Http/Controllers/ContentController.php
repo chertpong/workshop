@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Content;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use Illuminate\Support\Facades\Validator;
 use Log;
 use Auth;
 
@@ -75,7 +76,22 @@ class ContentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // Validate
+        $validator = Validator::make($request->all(),[
+            'title' => 'required',
+            'content' => 'required'
+        ]);
+        if($validator->fails()){
+            return back()->withErrors($validator)->withInput();
+        }
+        //Update
+        $content = Content::find($id);
+        $content->title = $request->get("title");
+        $content->content = $request->get("content");
+        $content->user_id = Auth::user()->id;
+        $content->save();
+
+        return redirect('contents/'.$id);
     }
 
     /**

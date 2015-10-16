@@ -22,7 +22,7 @@ Route::get('/contents', 'ContentController@index');
 Route::get('/contents/{id}','ContentController@show');
 Route::get('/contents/{id}/edit',['middleware' => 'auth', 'uses'=>'ContentController@edit']);
 Route::delete('/contents/{id}/delete',['middleware' => 'auth','uses'=>'ContentController@destroy']);
-
+Route::put('/contents/{id}/update',['middleware' => 'auth', 'uses'=>'ContentController@update']);
 
 
 
