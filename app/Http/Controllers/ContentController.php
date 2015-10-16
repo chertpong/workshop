@@ -42,7 +42,22 @@ class ContentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validate
+        $validator = Validator::make($request->all(),[
+            'title' => 'required',
+            'content' => 'required'
+        ]);
+        if($validator->fails()){
+            return back()->withErrors($validator)->withInput();
+        }
+        //Create
+        $content = new Content();
+        $content->title = $request->get("title");
+        $content->content = $request->get("content");
+        $content->user_id = Auth::user()->id;
+        $content->save();
+
+        return redirect('contents/'.$content->id);
     }
 
     /**
