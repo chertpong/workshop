@@ -28,6 +28,7 @@ Route::put('/contents/{id}/update',['middleware' => 'auth', 'uses'=>'ContentCont
 
 //Picture
 Route::get('/pictures/create',['middleware' => 'auth', 'uses' => 'PictureController@create']);
+Route::get('/pictures/{file_hashed_name}', ['uses'=>'PictureController@show']);
 Route::post('pictures/store',['middleware' => 'auth', 'uses' => 'PictureController@store']);
 
 
