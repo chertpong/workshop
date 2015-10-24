@@ -20,6 +20,8 @@ class CreatePicturesTable extends Migration
             $table->binary('data');
             $table->timestamps();
         });
+        //TODO: Change from BLOB to LONGBLOB for MySQL database
+        \Illuminate\Support\Facades\DB::statement('ALTER TABLE `pictures` MODIFY `data` LONGBLOB NOT NULL;');
     }
 
     /**
