@@ -26,7 +26,9 @@ Route::post('/contents/store',['middleware' => 'auth', 'uses' => 'ContentControl
 Route::delete('/contents/{id}/delete',['middleware' => 'auth','uses'=>'ContentController@destroy']);
 Route::put('/contents/{id}/update',['middleware' => 'auth', 'uses'=>'ContentController@update']);
 
-
+//Picture
+Route::get('/pictures/create',['middleware' => 'auth', 'uses' => 'PictureController@create']);
+Route::post('pictures/store',['middleware' => 'auth', 'uses' => 'PictureController@store']);
 
 
 
