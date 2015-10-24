@@ -52,6 +52,7 @@ class PictureController extends Controller
         //TODO: Change if we have more than one admin, now we have one, so no need to validate the uniqueness
         $picture->file_hashed_name = bcrypt($request->get('name').Carbon::now().'fkRdg');
         $picture->data = file_get_contents($request->file('file')->getRealPath());
+        $picture->mime_type = $request->file('file')->getMimeType();
         $picture->save();
 
         return $picture->id;

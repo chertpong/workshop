@@ -16,6 +16,7 @@ class CreatePicturesTable extends Migration
             $table->increments('id');
             $table->string('file_hashed_name');
             $table->string('picture_name')->unique();
+            $table->string('mime_type');
             $table->binary('data');
             $table->timestamps();
         });
