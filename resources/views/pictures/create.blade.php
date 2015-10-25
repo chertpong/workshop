@@ -18,7 +18,7 @@
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="form-group">
                         <label for="title">Picture's name</label>
-                        <input type="text" class="form-control" id="picture-name" placeholder="Picture's name" name="name" required>
+                        <input type="text" class="form-control" id="picture-name" placeholder="Picture's name" name="name">
                     </div>
                     <div class="form-group">
                         <label for="content">File</label>

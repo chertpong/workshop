@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class PictureController extends Controller
@@ -39,20 +40,24 @@ class PictureController extends Controller
      */
     public function store(Request $request)
     {
+        //TODO: Change if we have more than one admin, now we have one, so no need to validate the uniqueness
         $validator = Validator::make($request->all(),[
-            'name' => 'required',
             'file' => 'required|image|mimes:jpeg,png'
         ]);
         if($validator->fails()){
             return back()->withErrors($validator)->withInput();
         }
-        //Create
+
+        $pictureHashedName = md5($request->get('name').Carbon::now().env('PICTURE_HASH_KEY'));
+        $extensionType = $request->file('file')->getClientOriginalExtension();
+        //Move to pictures pool
+        Storage::put($pictureHashedName.'.'.$extensionType,file_get_contents($request->file('file')->getRealPath()));
+
+        //Save information of picture in database
         $picture = new Picture();
-        $picture->picture_name = $request->get('name');
-        //TODO: Change if we have more than one admin, now we have one, so no need to validate the uniqueness
-        $picture->file_hashed_name = bcrypt($request->get('name').Carbon::now().'fkRdg');
-        $picture->data = file_get_contents($request->file('file')->getRealPath());
-        $picture->mime_type = $request->file('file')->getMimeType();
+        $picture->name = $request->get('name',$request->file('file')->getClientOriginalName());
+        $picture->file_hashed_name = $pictureHashedName;
+        $picture->extension_type = $extensionType;
         $picture->save();
 
         return $picture->id;
