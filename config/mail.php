@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['no-reply@kritacademy.com' => null, 'name' => 'admin'],
 
     /*
     |--------------------------------------------------------------------------
