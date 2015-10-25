@@ -28,7 +28,11 @@ Route::put('/contents/{id}/update',['middleware' => 'auth', 'uses'=>'ContentCont
 
 //Picture
 Route::get('/pictures/create',['middleware' => 'auth', 'uses' => 'PictureController@create']);
-Route::post('pictures/store',['middleware' => 'auth', 'uses' => 'PictureController@store']);
+
+Route::post('/pictures/store',['middleware' => 'auth', 'uses' => 'PictureController@store']);
+Route::get('/pictures/{pictureHashedName}','PictureController@show');
+
+Route::delete('/pictures/{id}/delete',['middleware'=>'auth', 'uses' => 'PictureController@destroy']);
 
 
 

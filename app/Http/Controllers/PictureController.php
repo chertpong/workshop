@@ -40,18 +40,22 @@ class PictureController extends Controller
      */
     public function store(Request $request)
     {
-        //TODO: Change if we have more than one admin, now we have one, so no need to validate the uniqueness
+
+
         $validator = Validator::make($request->all(),[
             'file' => 'required|image|mimes:jpeg,png'
         ]);
         if($validator->fails()){
             return back()->withErrors($validator)->withInput();
         }
-
+        //TODO: Change if we have more than one admin, now we have one, so no need to validate the uniqueness
         $pictureHashedName = md5($request->get('name').Carbon::now().env('PICTURE_HASH_KEY'));
         $extensionType = $request->file('file')->getClientOriginalExtension();
         //Move to pictures pool
-        Storage::put($pictureHashedName.'.'.$extensionType,file_get_contents($request->file('file')->getRealPath()));
+        Storage::put(
+            $pictureHashedName.'.'.$extensionType,
+            file_get_contents($request->file('file')->getRealPath())
+        );
 
         //Save information of picture in database
         $picture = new Picture();
@@ -60,18 +64,19 @@ class PictureController extends Controller
         $picture->extension_type = $extensionType;
         $picture->save();
 
-        return $picture->id;
+        return redirect('pictures/'.$pictureHashedName);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $pictureHashedName
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($pictureHashedName)
     {
-        //
+        $picture = Picture::where('file_hashed_name','=',$pictureHashedName)->firstOrFail();
+        return redirect('../storage/app/'.$picture->file_hashed_name.'.'.$picture->extension_type);
     }
 
     /**
@@ -105,6 +110,9 @@ class PictureController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $picture = Picture::findOrFail($id);
+        Storage::delete($picture->file_hashed_name.'.'.$picture->extension_type);
+        Picture::destroy($id);
+        return true;
     }
 }
