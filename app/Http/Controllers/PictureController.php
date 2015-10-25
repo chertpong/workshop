@@ -19,7 +19,7 @@ class PictureController extends Controller
      */
     public function index()
     {
-        //
+        return view('pictures.index',['pictures'=>Picture::all()]);
     }
 
     /**
