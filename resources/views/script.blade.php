@@ -21,3 +21,4 @@
 {{--Angular controllers--}}
 <script src="{!! asset("/js/app.js") !!}"></script>
 <script src="{!! asset("/js/controller/contentController.js") !!}"></script>
+<script src="{!! asset("/js/controller/pictureController.js") !!}"></script>

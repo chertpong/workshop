@@ -3,11 +3,12 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
+  'textAngular',
   'contentControllers',
-  'textAngular'
+  'pictureControllers'
+
 ]).
-config(['$routeProvider','$interpolateProvider', function($routeProvider,$interpolateProvider) {
+config(['$interpolateProvider', function($interpolateProvider) {
     $interpolateProvider.startSymbol('[[');
     $interpolateProvider.endSymbol(']]');
-
 }]);

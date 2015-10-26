@@ -19,7 +19,6 @@ contentControllers.controller('addContentController',['$scope','$http','$window'
                     },
                     function errorCallback(response){
                         $('<div class="alert alert-danger" role="alert">Error!</div>').appendTo(".alert-msg").fadeOut(5000);
-                        console.log(response);
                     }
                 );
         }

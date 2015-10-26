@@ -34,6 +34,8 @@ Route::post('/pictures/store',['middleware' => 'auth', 'uses' => 'PictureControl
 Route::get('/pictures/{pictureHashedName}','PictureController@show');
 
 Route::delete('/pictures/{id}/delete',['middleware'=>'auth', 'uses' => 'PictureController@destroy']);
+//Picture API
+Route::get('/api/pictures',['uses'=>'PictureController@apiAll']);
 
 
 

@@ -113,6 +113,10 @@ class PictureController extends Controller
         $picture = Picture::findOrFail($id);
         Storage::delete($picture->file_hashed_name.'.'.$picture->extension_type);
         Picture::destroy($id);
-        return true;
+        return redirect('pictures');
+    }
+
+    public function apiAll(){
+        return Picture::all()->toJson();
     }
 }
