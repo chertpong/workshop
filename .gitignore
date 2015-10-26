@@ -8,7 +8,6 @@
 # if you remove the above rule, at least ignore the following:
 
 # User-specific stuff:
-/public/bower_components
 # .idea/workspace.xml
 # .idea/tasks.xml
 # .idea/dictionaries
@@ -50,5 +49,6 @@ crashlytics-build.properties
 /vendor
 /node_modules
 Homestead.yaml
+/public/bower_components
 Homestead.json
 .env
