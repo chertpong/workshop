@@ -57,7 +57,7 @@ class ContentController extends Controller
         $content->user_id = Auth::user()->id;
         $content->save();
 
-        return redirect('contents/'.$content->id);
+        return url('contents/'.$content->id);
     }
 
     /**
