@@ -47,8 +47,24 @@
                 <li id="contactb"><a class="hvr-underline-from-left" href="{{ url('/#history') }}"><strong>History</strong></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right" id="signin">
-                <li><a href="{{ url('/auth/login') }}" class="bsignin hvr-underline-from-left" id="sign-in"><strong>Sign in</strong></a></li>
-            </ul>
+					@if(Auth::check())
+						<ul class="nav navbar-nav">
+							<li><a href={{url('contents/create')}}>Create content</a></li>
+                            <li><a href={{url('pictures')}}>Manage pictures</a></li>
+						</ul>
+					@endif
+					@if (Auth::guest())
+						<li><a href="{{ url('/auth/login') }}" class="bsignin hvr-underline-from-left" id="sign-in"><strong>Sign in</strong></a></li>
+						{{--<li><a href={{url('auth/register')}}>Register</a></li>--}}
+					@else
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href={{url('auth/logout')}}>Logout</a></li>
+							</ul>
+						</li>
+					@endif
+				</ul>
         </div>
     </div>
 </nav>

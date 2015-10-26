@@ -9,10 +9,12 @@
                     <div class="picture col-md-4">
                         <span><i class="fa fa-file-image-o"> {!! $picture->name !!}</i></span>
                         <img src="{!! url('pictures/'.$picture->file_hashed_name) !!}" class="img-responsive img-thumbnail" alt="{!! $picture->name !!}">
-                        <button type="button" class="btn btn-default pull-right">Copy url</button>
-                        <button type="button" class="btn btn-warning">Delete</button>
-                        <span>URL of picture</span>
-                        <input type="text" class="form-control" value="{!! url('pictures/'.$picture->file_hashed_name) !!}" name="pic-url">
+                        <button type="button" class="btn btn-warning col-xs-6">Delete</button>
+                        <button type="button" class="btn btn-default col-xs-6">Copy url</button>
+                        <div class="input-group">
+                            <div class="input-group-addon">URL</div>
+                            <input type="text" class="form-control" value="{!! url('pictures/'.$picture->file_hashed_name) !!}" name="pic-url">
+                        </div>
                     </div>
                 @endforeach
                 </div>
