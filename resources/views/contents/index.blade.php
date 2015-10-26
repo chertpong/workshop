@@ -22,9 +22,9 @@
                         </div>
                     </article>
                 @endforeach
-                    <div class="paginate">
-                        {!! $contents->render() !!}
-                    </div>
+                <div class="paginate">
+                    {!! $contents->render() !!}
+                </div>
             </div>
         </div>
     </div>
