@@ -18,6 +18,13 @@ class UserTableSeeder extends Seeder
         $user->remember_token = str_random(10);
         $user->save();
 
+        $krit = new \App\User();
+        $krit->name = 'kritcg';
+        $krit->email = 'kritcg@gmail.com';
+        $krit->password = bcrypt('kritcg');
+        $krit->remember_token = str_random(10);
+        $krit->save();
+
         factory(App\User::class, 2)->create()->each(function($u){
             $u->contents()->save(factory(App\Content::class)->make());
         });
