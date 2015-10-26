@@ -64,7 +64,7 @@ class PictureController extends Controller
         $picture->extension_type = $extensionType;
         $picture->save();
 
-        return redirect('pictures/'.$pictureHashedName);
+        return redirect('pictures/');
     }
 
     /**
