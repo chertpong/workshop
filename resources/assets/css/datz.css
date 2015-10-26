@@ -18,11 +18,12 @@ a{
 
 .content{
     margin-bottom: 80px;
+    margin-top: 350px;
     padding-top: 40px;
     padding-bottom: 80px;
     background-color: rgba(0,0,0,0.7);
     color:#fff
-    z-index:0;
+z-index:0;
     -webkit-transform: translateZ( 0 );
     transform: translateZ( 0 );
     -webkit-transition: -webkit-transform 0.6s ease-in-out;
@@ -93,11 +94,12 @@ section {
     margin-top: 120px;
 }
 #mainrow{
+    margin-top: 0px!important;
     padding-bottom: 70px;
     background-color: rgba(0,0,0,0.7);
 }
 #contact{
-    padding-bottom: 650px;
+    padding-bottom: 400px;
 }
 #map{
     width:500px;
@@ -154,4 +156,61 @@ a:hover{
 }
 h1{
     letter-spacing: 3px;
+    color:white;
+}
+.row{
+    margin-top: 80px;
+}
+.contentrow{
+    margin-top: 0px!important;
+}
+h2>a{
+    color: chocolate!important;
+    font-weight: bold;
+}
+#history{
+    margin-top: 300px;
+    background-color: rgba(0,0,0,0.7);
+}
+#contactbox{
+    background-color: rgba(0,0,0,0.7);
+    padding-bottom: 100px;
+}
+#historyhead{
+    color: #c9d0d4;
+    font-size: 46px;
+    font-weight: 100;
+    line-height: 50px;
+    letter-spacing: 1px;
+    padding: 0 0 40px;
+    border-bottom: double #555;
+    padding-right: -70px;
+}
+.templehistory{
+    font-family: lucien!important;
+    color: #bbc3c8;
+    font-size: 18px;
+    line-height: 40px;
+    text-indent: 30px;
+    margin: 0;
+    margin-top: 40px;
+    text-align: justify;
+}
+#clang{
+    font-size: 20px!important;
+
+}
+.button-tran{
+    background: transparent;
+}
+#thhis{
+    -webkit-animation-duration: 2s;
+}
+#enhis{
+    display: none;
+    -webkit-animation-duration: 3s;
+
+}
+#loginrow{
+    margin-top: 70px!important;
 }

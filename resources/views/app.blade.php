@@ -25,7 +25,6 @@
         background:center no-repeat fixed url(https://c2.staticflickr.com/6/5663/22347750402_707fd26aa7_h.jpg);
         background-size: cover;
         height: 100%;
-        color:white;
 
     }
 </style>
@@ -43,10 +42,10 @@
         <div class="navbar-collapse collapse" id="head-nav">
             <ul class="nav navbar-nav navbar-left" id="menu2">
                 <li id="contentb"><a class=" hvr-underline-from-left"  href="{{ url('/contents') }}"><strong>Content</strong></a></li>
-                <li id="contactb"><a class="hvr-underline-from-left" href="{{ url('/#contact') }}"><strong>Contact</strong></a></li>
+                <li id="contactb"><a class="hvr-underline-from-left" href="{{ url('/#history') }}"><strong>History</strong></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right" id="signin">
-                <li><a href="#" class="bsignin hvr-underline-from-left" id="sign-in"><strong>Sign in</strong></a></li>
+                <li><a href="{{ url('/auth/login') }}" class="bsignin hvr-underline-from-left" id="sign-in"><strong>Sign in</strong></a></li>
             </ul>
         </div>
     </div>
