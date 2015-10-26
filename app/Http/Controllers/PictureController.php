@@ -49,7 +49,7 @@ class PictureController extends Controller
             return back()->withErrors($validator)->withInput();
         }
         //TODO: Change if we have more than one admin, now we have one, so no need to validate the uniqueness
-        $pictureHashedName = md5($request->get('name').Carbon::now().env('PICTURE_HASH_KEY'));
+        $pictureHashedName = md5($request->file('file')->getClientOriginalName().Carbon::now().env('PICTURE_HASH_KEY'));
         $extensionType = $request->file('file')->getClientOriginalExtension();
         //Move to pictures pool
         Storage::put(
