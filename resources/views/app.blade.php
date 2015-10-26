@@ -5,15 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Workshop</title>
-
-    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href={!! url("../bower_components/animate.css/animate.min.css") !!}>
-    <link rel="stylesheet" href={!! url("../bower_components/Buttons/css/buttons.css") !!}>
-    <link rel="stylesheet" href={!! url("../bower_components/Hover-master/css/hover.css") !!}>
-    <link rel="stylesheet" href={!! url("../bower_components/angular-carousel/dist/angular-carousel.css") !!}>
-    <link rel="stylesheet" href={!! url("../resources/assets/css/datz.css") !!}>
+@include('css')
     <!-- Fonts -->
     <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
@@ -61,19 +53,7 @@
 </nav>
 
 @yield('content')
-        <!-- Scripts -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<script src="../bower_components/angular/angular.js"></script>
-<script src="../bower_components/angular-route/angular-route.js"></script>
-<script src="../resources/assets/js/app.js"></script>
-<script src="../bower_components/jquery/dist/jquery.js"></script>
-<script src="../bower_components/Buttons/js/buttons.js"></script>
-<script src="../bower_components/jquery.lettering.js"></script>
-<script src="../bower_components/jquery.textillate.js"></script>
-<script src="../bower_components/bootstrap/js/dropdown.js"></script>
-<script src="../bower_components/angular-touch/angular-touch.js"></script>
-<script src="../bower_components/angular-carousel/dist/angular-carousel.js"></script>
+@include('script')
 
 
 </body>

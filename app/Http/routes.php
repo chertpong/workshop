@@ -12,10 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 Route::get('/home',function(){
-   return 'home';
+   return view('home');
 });
 //Content
 Route::get('/contents', 'ContentController@index');
