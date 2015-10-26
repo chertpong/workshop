@@ -19,7 +19,7 @@ class ContentController extends Controller
     public function index()
     {
         $perPage = 5;
-        $contents = Content::paginate($perPage);
+        $contents = Content::orderBy('created_at','desc')->paginate($perPage);
         $contents->setPath('contents');
         return view('contents.index')->with('contents',$contents);
     }
