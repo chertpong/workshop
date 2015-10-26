@@ -29,7 +29,7 @@
 
     }
 </style>
-<body>
+<body ng-app="myApp">
 <nav class="nav navbar-trans navbar-fixed-top">
     <div id="headnav" class="container-fluid">
         <div class="navbar-header">

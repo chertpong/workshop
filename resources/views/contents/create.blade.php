@@ -14,6 +14,16 @@
                         </ul>
                     </div>
                 @endif
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="title">Title of content</label>
+                            <input type="title" class="form-control" id="title" placeholder="Title" name="title">
+                        </div>
+                        <br>
+                        <div text-angular name="htmlcontent" ng-model="htmlcontent"></div>
+                        <h3>Raw HTML in a text area</h3>
+                        <textarea class="form-control col-xs-12" rows="10" ng-model="htmlcontent"></textarea>
+                    </div>
                 <form class="form-horizontal" method="POST" action={{url('contents/store')}}>
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="form-group">

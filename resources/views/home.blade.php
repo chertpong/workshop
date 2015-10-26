@@ -79,27 +79,14 @@
             </div>
             </div>
             <div class="row center-block" id="address">
-                <address>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</address>
+                <address>103 Road King Prajadhipok Phra Singh, Muang District, Chiang Mai, 50200
+                    053 276 140</address>
             </div>
         </div>
     </section>
 
 
 
-
-
-        <!-- Scripts -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<script src="../bower_components/angular/angular.js"></script>
-<script src="../bower_components/angular-route/angular-route.js"></script>
-<script src="../resources/assets/js/app.js"></script>
-<script src="../bower_components/jquery/dist/jquery.js"></script>
-<script src="../bower_components/jquery.lettering.js"></script>
-<script src="../bower_components/jquery.textillate.js"></script>
-<script src="../bower_components/bootstrap/js/dropdown.js"></script>
-<script src="../bower_components/angular-touch/angular-touch.js"></script>
-<script src="../bower_components/angular-carousel/dist/angular-carousel.js"></script>
 <script>
     $('.tlt').textillate({
         in: { effect: 'splat' },
@@ -107,7 +94,7 @@
         loop: true
     });
 </script>
-//smoooth scrolling
+{{--smoooth scrolling--}}
 <script> $(function() {
         $('a[href*=#]:not([href=#])').click(function() {
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -123,7 +110,7 @@
         });
     });
 </script>
-//main pic fade
+{{--main pic fade--}}
 <script>$("#slideshow > div:gt(0)").hide();
 
     setInterval(function() {

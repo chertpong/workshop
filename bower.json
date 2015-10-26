@@ -24,6 +24,7 @@
     "textillate": "~0.4.0",
     "angular-carousel": "~1.0.1",
     "hover": "~2.0.2",
-    "Buttons": "~2.0.0"
+    "Buttons": "~2.0.0",
+    "textAngular": "~1.4.6"
   }
 }
