@@ -13,5 +13,6 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
     mix.sass('app.scss');
-    mix.styles(['datz.css']);
+    mix.styles(['bg.css']);
+    mix.scripts(['homepage.js','scroll.js']);
 });

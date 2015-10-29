@@ -5,48 +5,47 @@
         <section class="container-fluid" id="sec1">
             <div id="slideshow">
                 <div>
-                    <img  src="https://c2.staticflickr.com/6/5655/22360803525_2fe4d688d8_b.jpg" class="center-block">
+                    <img  src="https://c2.staticflickr.com/6/5655/22360803525_2fe4d688d8_b.jpg" class="img-responsive">
                 </div>
                 <div>
-                    <img src="https://c1.staticflickr.com/1/580/22371477131_0090674b52_b.jpg" class="= center-block">
+                    <img src="https://c1.staticflickr.com/1/580/22371477131_0090674b52_b.jpg" class="img-responsive">
                 </div>
                 <div>
-                    <img src="https://c2.staticflickr.com/6/5795/22360807025_f943722364_b.jpg" class="= center-block">
+                    <img src="https://c2.staticflickr.com/6/5795/22360807025_f943722364_b.jpg" class="img-responsive">
                 </div>
                 <div>
-                    <img src="https://c1.staticflickr.com/1/629/21738039214_f98f5f4bd7_b.jpg" class="= center-block">
+                    <img src="https://c1.staticflickr.com/1/629/21738039214_f98f5f4bd7_b.jpg" class="img-responsive">
                 </div>
                 <div>
-                    <img src="https://c2.staticflickr.com/6/5703/22334806556_df71d062ab_b.jpg" class="= center-block">
+                    <img src="https://c2.staticflickr.com/6/5703/22334806556_df71d062ab_b.jpg" class="img-responsive">
                 </div>
                 <div>
-                    <img src="https://c2.staticflickr.com/6/5802/22360840685_21f548b534_b.jpg" class=" center-block">
+                    <img src="https://c2.staticflickr.com/6/5802/22360840685_21f548b534_b.jpg" class="img-responsive">
                 </div>
             </div>
         </section>
 
-
-        <h1 class="tlt">
-            <ul class="texts">
-                <li>วัดเจดีย์หลวง</li>
-                <li>Wat Chedi Luang</li>
-            </ul>
-        </h1>
+       <div class="row">
+           <div id="temple-name" class="col-xs-12 col-md-6 col-md-offset-3">
+               <h1 class="tlt">
+                   <ul class="texts">
+                       <li>วัดเจดีย์หลวง</li>
+                       <li>Wat Chedi Luang</li>
+                   </ul>
+               </h1>
+           </div>
+       </div>
 
     </div>
-    <section id="slide">
-
-    </section>
     <section id="history">
-        <div class="container">
-            <h1 id="historyhead">History
+            <h1 id="history-head">History
                 <ul class="nav navbar-nav navbar-right" id="clang">
-                    <li><button class="button button-circle button-tran hvr-fade" onclick="changeth()">TH</button></li>
-                    <li><button class="button button-circle button-tran hvr-fade" onclick="changeen()">EN</button></li>
+                    <li><button class="button button-circle button-tran hvr-fade" onclick="changeLanguageToEn()">TH</button></li>
+                    <li><button class="button button-circle button-tran hvr-fade" onclick="changeLanguageToTh()">EN</button></li>
                 </ul>
             </h1>
-            <div class="templehistory">
-                <p id="thhis">วัดเจย์ดีหลวง หรือ "วัดโชติการาม" หรือ "ราชกุฏคาร" ก็เรียกสร้างในสมัยพระเจ้าแสนเมืองรัชกาลที่ 7 แห่งราชวงศ์มังราย(ครองราชย์ พ.ศ. 1929-1944) ไม่ปรากฎปีที่สร้างวัดแน่ชัด
+            <div class="temple-history">
+                <p id="th-his">วัดเจย์ดีหลวง หรือ "วัดโชติการาม" หรือ "ราชกุฏคาร" ก็เรียกสร้างในสมัยพระเจ้าแสนเมืองรัชกาลที่ 7 แห่งราชวงศ์มังราย(ครองราชย์ พ.ศ. 1929-1944) ไม่ปรากฎปีที่สร้างวัดแน่ชัด
                     วัดเจย์ดีหลวงเป็นพระอารามหลวงแบบโบราณที่แบ่งเขต พุทธาวาส/สังฆวาสอีก 4 ที่ตั้งรายล้อมเขตพุทธาวาสอยู่ทั้ง 4 ทิศ กิจวัตรประจำวัน เช่น ไหว้พระสวดมนต์แต่ละสังฆวาสหรือคณะ ต่างคนต่างทำในวิหารของตน
                     ถ้าเป็นงานสำคัญๆจึงจะร่วมกันในพระวิหารหลวงและประกอบสังฆกรรม อันเป็นสัฆกิจร่วมกันในพระอุโบสถ ซึ่งมีอยู่แห่งเดียวในเขตพุทธาวาสที่ได้ชื่อว่า "วัดเจย์ดีหลวง" ตั้งแต่โบราณกาลมาเพราะถือเอาพระธาตุเจดีย์หลวงเป็นเนมิตกนามกล่าวได้ว่าเป็นเจติย
                     สถานโบราณสูงใหญ่ที่สุดของไทย<br>
@@ -56,14 +55,10 @@
                     ด้วยการมองการณ์ไกล และผลงานที่เป็นรูปธรรมดังกล่าวจึงทำให้วัดเจดีย์หลวงได้เลื่อฐานะขึ้นเป็น "พระอารามหลวงชั้นตรี" ชนิด "วรวิหาร" เป็น "วัดเจดีย์หลวงวรวิหาร" เมื่อปีพุทธศักราช 2481 เป็นต้นมา
                 </p>
 
-                <p id="enhis">It was in May, 1932 that i had the aus
+                <p id="en-his">It was in May, 1932 that i had the aus
 
                 </p>
             </div>
-
-
-
-        </div>
     </section>
 
     <section id="headcontent">
@@ -105,61 +100,18 @@
         </div>
     </section>
 
-    <script> $(function() {
-            $('a[href*=#]:not([href=#])').click(function() {
-                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-                    var target = $(this.hash);
-                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                    if (target.length) {
-                        $('html,body').animate({
-                            scrollTop: target.offset().top
-                        }, 600);
-                        return false;
-                    }
-                }
-            });
-        });
-    </script>
 
-    <script>$("#slideshow > div:gt(0)").hide();
+    {{--<script>$("#slideshow > div:gt(0)").hide();--}}
+        {{--setInterval(function() {--}}
+            {{--$('#slideshow > div:first')--}}
+                    {{--.fadeOut(1000)--}}
+                    {{--.next()--}}
+                    {{--.fadeIn(1000)--}}
+                    {{--.end()--}}
+                    {{--.appendTo('#slideshow');--}}
+        {{--},  4000);--}}
+    {{--</script>--}}
 
-        setInterval(function() {
-            $('#slideshow > div:first')
-                    .fadeOut(1000)
-                    .next()
-                    .fadeIn(1000)
-                    .end()
-                    .appendTo('#slideshow');
-        },  4000);
-    </script>
-    <script>
-
-        $('.tlt').textillate({
-            in: {
-                effect: 'fadeIn',delay: '150',
-            },
-            out:{
-                effect: 'flipOutX',
-                delay: '150',
-                shuffle:'true'
-            },
-            loop:true
-        });
-
-    </script>
-    <script>
-        function changeth(){
-            $('#enhis').fadeOut(0);
-            $('#thhis').fadeIn();
-        }
-    </script>
-    <script>
-        function changeen() {
-            $('#thhis').fadeOut(0);
-            $('#enhis').fadeIn();
-
-        }
-    </script>
 
 
 @endsection

@@ -4,7 +4,7 @@
     <div class="container-fluid" ng-controller="addContentController">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <div class=".alert-msg">
+                <div class="alert-msg col-xs-12">
                 @if (count($errors) > 0)
                     <div class="alert alert-danger">
                         <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -29,7 +29,8 @@
                             <textarea class="form-control col-xs-12" rows="10" ng-model="htmlcontent"></textarea>
                             <button class="btn btn-success pull-right" ng-click="save()">Create</button>
                         </div>
-                    </div>
+                </div>
+
             </div>
         </div>
     </div>

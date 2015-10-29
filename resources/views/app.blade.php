@@ -23,18 +23,14 @@
         font-family: lucien;
         src: {!! url("bower_components/bootstrap/fonts/DRdeco.ttf") !!};
     }
-    html,body{
-        background:center no-repeat fixed url(https://c2.staticflickr.com/6/5663/22347750402_707fd26aa7_h.jpg);
-        background-size: cover;
-        height: 100%;
-
-    }
 </style>
 <body ng-app="myApp">
-<nav class="nav navbar-trans navbar-fixed-top">
+<div id="body-wrapper">
+<nav id="navigation" class="nav navbar-fixed-top navbar-default navbar-trans" role="navigation">
     <div id="headnav" class="container-fluid">
         <div class="navbar-header">
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#head-nav" aria-expanded="false">
+                <span class="sr-only">Toggle Navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -43,7 +39,7 @@
         </div>
         <div class="navbar-collapse collapse" id="head-nav">
             <ul class="nav navbar-nav navbar-left" id="menu2">
-                <li id="contentb"><a class=" hvr-underline-from-left"  href="{{ url('/contents') }}"><strong>Content</strong></a></li>
+                <li id="contentb" class="hvr-underline-from-left"><a href="{{ url('/contents') }}"><strong>Content</strong></a></li>
                 <li id="contactb"><a class="hvr-underline-from-left" href="{{ url('/#history') }}"><strong>History</strong></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right" id="signin">
@@ -72,6 +68,6 @@
 @yield('content')
 
 
-
+</div>
 </body>
 </html>

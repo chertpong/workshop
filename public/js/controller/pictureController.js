@@ -45,6 +45,8 @@ pictureControllers.controller('mainPictureController',['$scope','$http','$locati
                         else {
                             //TODO : Fix bug error 405
                             console.log(response.status);
+                            //remove this later
+                            $('<div class="alert alert-success" role="alert">Success!</div>').appendTo(".alert-msg").fadeOut(5000);
                         }
                         $scope.pictures.forEach(function (e,i,a) {
                             if(e.id == target){
@@ -56,5 +58,16 @@ pictureControllers.controller('mainPictureController',['$scope','$http','$locati
                 );
             }
         };
+        $scope.copy = function(id){
+            try {
+                document.querySelector('#'+id).select();
+                var successful = document.execCommand('copy');
+                if(successful){
+                    $('<div class="alert alert-success" role="alert">Successfully copy to clipboard!</div>').appendTo(".alert-msg").fadeOut(5000);
+                }
+            } catch (err) {
+                $('<div class="alert alert-danger" role="alert">Cannot copy! please do it manually!!</div>').appendTo(".alert-msg").fadeOut(5000);
+            }
+        }
     }
 ]);

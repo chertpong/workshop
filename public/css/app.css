@@ -5991,7 +5991,54 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-a:hover {
-  background-color: transparent; }
+.alert-msg {
+  margin-top: 40px;
+  position: absolute;
+  z-index: 10; }
+
+.tlt {
+  font-family: lucien;
+  margin-top: 160px;
+  color: saddlebrown !important;
+  text-shadow: 4px 2px 6px rgba(139, 69, 19, 0.6) !important;
+  font-size: 80px !important;
+  text-align: center; }
+
+.button-tran {
+  background: transparent; }
+
+#th-his {
+  -webkit-animation-duration: 2s; }
+
+#en-his {
+  display: none;
+  -webkit-animation-duration: 3s; }
+
+.temple-history {
+  font-family: lucien !important;
+  color: #bbc3c8;
+  font-size: 18px;
+  line-height: 40px;
+  text-indent: 30px;
+  margin: 0;
+  margin-top: 40px;
+  text-align: justify; }
+
+#history-section {
+  margin-top: 300px;
+  background-color: rgba(0, 0, 0, 0.7); }
+
+#history-head {
+  color: #c9d0d4;
+  font-size: 46px;
+  font-weight: 100;
+  line-height: 50px;
+  letter-spacing: 1px;
+  padding: 0 0 40px;
+  border-bottom: double #555;
+  padding-right: -70px; }
+
+#body-wrapper {
+  padding-top: 80px; }
 
 /*# sourceMappingURL=app.css.map */

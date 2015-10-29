@@ -22,5 +22,6 @@ contentControllers.controller('addContentController',['$scope','$http','$window'
                     }
                 );
         }
+
     }
 ]);

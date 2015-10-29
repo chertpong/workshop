@@ -17,7 +17,7 @@
 <script src="{!! asset("/bower_components/letteringjs/jquery.lettering.js") !!}"></script>
 <script src="{!! asset("/bower_components/textillate/jquery.textillate.js") !!}"></script>
 
-
+<script src="{!! asset("/js/all.js") !!}"></script>
 {{--Angular controllers--}}
 <script src="{!! asset("/js/app.js") !!}"></script>
 <script src="{!! asset("/js/controller/contentController.js") !!}"></script>
