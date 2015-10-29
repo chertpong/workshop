@@ -25,6 +25,8 @@ Route::get('/contents/{id}/edit',['middleware' => 'auth', 'uses'=>'ContentContro
 Route::post('/contents/store',['middleware' => 'auth', 'uses' => 'ContentController@store']);
 Route::delete('/contents/{id}/delete',['middleware' => 'auth','uses'=>'ContentController@destroy']);
 Route::put('/contents/{id}/update',['middleware' => 'auth', 'uses'=>'ContentController@update']);
+//Content API
+Route::get('/api/contents/{id}','ContentController@apiGet');
 
 //Picture
 Route::get('/pictures',['uses'=>'PictureController@index']);
