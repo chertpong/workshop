@@ -6,6 +6,8 @@
 <script src="{!! asset("/bower_components/angular-route/angular-route.js") !!}"></script>
 <script src="{!! asset("/bower_components/angular-touch/angular-touch.js") !!}"></script>
 <script src="{!! asset("/bower_components/angular-carousel/dist/angular-carousel.js") !!}"></script>
+<script src="{!! asset("/bower_components/angular-bootstrap/ui-bootstrap.js") !!}"></script>
+<script src="{!! asset("/bower_components/angular-bootstrap/ui-bootstrap-tpls.js") !!}"></script>
 {{--textAngular--}}
 <script src="{!! asset("/bower_components/textAngular/dist/textAngular-rangy.min.js") !!}"></script>
 <script src="{!! asset("/bower_components/textAngular/dist/textAngular-sanitize.min.js") !!}"></script>
@@ -22,3 +24,5 @@
 <script src="{!! asset("/js/app.js") !!}"></script>
 <script src="{!! asset("/js/controller/contentController.js") !!}"></script>
 <script src="{!! asset("/js/controller/pictureController.js") !!}"></script>
+{{--Angular services--}}
+<script src="{!! asset("/js/service/pictureService.js") !!}"></script>

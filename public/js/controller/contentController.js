@@ -2,10 +2,33 @@
 /**
  * Created by Chertpong on 26/10/2558.
  */
-var contentControllers = angular.module('contentControllers',['textAngular']);
-contentControllers.config(['$interpolateProvider', function($interpolateProvider) {
+var contentControllers = angular.module('contentControllers',['textAngular','pictureServices']);
+contentControllers.config(['$interpolateProvider','$provide', function($interpolateProvider,$provide) {
     $interpolateProvider.startSymbol('[[');
     $interpolateProvider.endSymbol(']]');
+    $provide.decorator('taOptions', ['taRegisterTool', '$delegate','embeddedPictureService', function(taRegisterTool, taOptions,embeddedPictureService) { // $delegate is the taOptions we are decorating
+        taOptions.toolbar = [
+            ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'pre', 'quote'],
+            ['bold', 'italics', 'underline', 'strikeThrough', 'ul', 'ol', 'redo', 'undo', 'clear'],
+            ['justifyLeft', 'justifyCenter', 'justifyRight', 'indent', 'outdent'],
+            ['html','insertLink', 'insertVideo', 'wordcount', 'charcount']
+        ];
+
+        taRegisterTool('insertImage2', {
+            iconclass: 'fa fa-picture-o',
+            action: function($deferred){
+                var textAngular = this;
+                embeddedPictureService.selectPic(function(data){
+                    console.log(data);
+                    textAngular.$editor().wrapSelection('insertImage', data);
+                });
+                $deferred.resolve();
+            }
+        });
+
+        taOptions.toolbar[3].push('insertImage2');
+        return taOptions;
+    }]);
 }]);
 
 contentControllers.controller('addContentController',['$scope','$http','$window',
