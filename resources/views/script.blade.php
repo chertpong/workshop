@@ -23,6 +23,7 @@
 {{--Angular controllers--}}
 <script src="{!! asset("/js/app.js") !!}"></script>
 <script src="{!! asset("/js/controller/contentController.js") !!}"></script>
+<script src="{!! asset("/js/controller/homeController.js") !!}"></script>
 <script src="{!! asset("/js/controller/pictureController.js") !!}"></script>
 {{--Angular services--}}
 <script src="{!! asset("/js/service/pictureService.js") !!}"></script>
