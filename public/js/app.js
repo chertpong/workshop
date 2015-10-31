@@ -5,7 +5,8 @@ angular.module('myApp', [
   'ngRoute',
   'textAngular',
   'contentControllers',
-  'pictureControllers'
+  'pictureControllers',
+  'pictureServices'
 
 ]).
 config(['$interpolateProvider', function($interpolateProvider) {
