@@ -125,4 +125,8 @@ class ContentController extends Controller
     public function apiGet($id){
         return Content::findOrFail($id)->toJson();
     }
+
+    public function apiLastRecent($numberOfContent){
+        return Content::orderBy('created_at','desc')->limit($numberOfContent)->get()->toJson();
+    }
 }
