@@ -1,13 +1,15 @@
-$('.tlt').textillate({
-    in: {
-        effect: 'fadeIn',delay: '150',
-    },
-    out:{
-        effect: 'flipOutX',
-        delay: '150',
-        shuffle:'true'
-    },
-    loop:true
+$(function(){
+    $('.tlt').textillate({
+        in: {
+            effect: 'fadeIn',delay: '150',
+        },
+        out:{
+            effect: 'flipOutX',
+            delay: '150',
+            shuffle:'true'
+        },
+        loop:true
+    });
 });
 
 function changeLanguageToEn() {
