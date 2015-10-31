@@ -18,6 +18,7 @@
 <script src="{!! asset("/bower_components/Buttons/js/buttons.js") !!}"></script>
 <script src="{!! asset("/bower_components/letteringjs/jquery.lettering.js") !!}"></script>
 <script src="{!! asset("/bower_components/textillate/jquery.textillate.js") !!}"></script>
+<script src="{!! asset("/bower_components/script.js") !!}"></script>
 
 <script src="{!! asset("/js/all.js") !!}"></script>
 {{--Angular controllers--}}
