@@ -27,9 +27,9 @@
         <div id='cssmenu'>
             <ul id="menubar">
                 <li class='active'><a id="button0" href="{{ url('/') }}">Home</a></li>
-                <li><a id="button1" href=#history>History</a></li>
+                <li><a id="button1" href="{{ url('/').'/#history' }}">History</a></li>
                 <li ><a id="button2" href="{{ url('/contents') }}">Content</a></li>
-                <li ><a id="button3" href=#contact>Contact</a></li>
+                <li ><a id="button3" href="{{ url('/').'/#contact' }}">Contact</a></li>
                 @if(Auth::check())
                     <ul class="nav navbar-nav">
                         <li><a href={{url('contents/create')}} class="hvr-underline-from-left">Create content</a></li>

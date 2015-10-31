@@ -48,15 +48,15 @@
     <section id="history">
         <div class="row" id="history-div">
             <div class="container" >
-                <h1 id="historyhead">History
+                <h1 id="history-head">History
                     <ul class="nav navbar-nav navbar-right">
-                        <li><button class="button button-circle button-tran hvr-fade" onclick="changeth()">TH</button></li>
-                        <li><button class="button button-circle button-tran hvr-fade" onclick="changeen()">EN</button></li>
+                        <li><button class="button button-circle button-tran hvr-fade" onclick="changeLanguageToTh()">TH</button></li>
+                        <li><button class="button button-circle button-tran hvr-fade" onclick="changeLanguageToEn()">EN</button></li>
                     </ul>
                 </h1>
                 <hr>
-                <div class="templehistory">
-                    <p id="thhis">วัดเจย์ดีหลวง หรือ "วัดโชติการาม" หรือ "ราชกุฏคาร" ก็เรียกสร้างในสมัยพระเจ้าแสนเมืองรัชกาลที่ 7 แห่งราชวงศ์มังราย(ครองราชย์ พ.ศ. 1929-1944) ไม่ปรากฎปีที่สร้างวัดแน่ชัด
+                <div class="temple-history">
+                    <p id="th-his">วัดเจย์ดีหลวง หรือ "วัดโชติการาม" หรือ "ราชกุฏคาร" ก็เรียกสร้างในสมัยพระเจ้าแสนเมืองรัชกาลที่ 7 แห่งราชวงศ์มังราย(ครองราชย์ พ.ศ. 1929-1944) ไม่ปรากฎปีที่สร้างวัดแน่ชัด
                         วัดเจย์ดีหลวงเป็นพระอารามหลวงแบบโบราณที่แบ่งเขต พุทธาวาส/สังฆวาสอีก 4 ที่ตั้งรายล้อมเขตพุทธาวาสอยู่ทั้ง 4 ทิศ กิจวัตรประจำวัน เช่น ไหว้พระสวดมนต์แต่ละสังฆวาสหรือคณะ ต่างคนต่างทำในวิหารของตน
                         ถ้าเป็นงานสำคัญๆจึงจะร่วมกันในพระวิหารหลวงและประกอบสังฆกรรม อันเป็นสัฆกิจร่วมกันในพระอุโบสถ ซึ่งมีอยู่แห่งเดียวในเขตพุทธาวาสที่ได้ชื่อว่า "วัดเจย์ดีหลวง" ตั้งแต่โบราณกาลมาเพราะถือเอาพระธาตุเจดีย์หลวงเป็นเนมิตกนามกล่าวได้ว่าเป็นเจติย
                         สถานโบราณสูงใหญ่ที่สุดของไทย<br>
@@ -66,7 +66,7 @@
                         ด้วยการมองการณ์ไกล และผลงานที่เป็นรูปธรรมดังกล่าวจึงทำให้วัดเจดีย์หลวงได้เลื่อฐานะขึ้นเป็น "พระอารามหลวงชั้นตรี" ชนิด "วรวิหาร" เป็น "วัดเจดีย์หลวงวรวิหาร" เมื่อปีพุทธศักราช 2481 เป็นต้นมา
                     </p>
 
-                    <p id="enhis">It was in May , 1932 that I had the auspicious occasion to be ordained as a novice
+                    <p id="en-his">It was in May , 1932 that I had the auspicious occasion to be ordained as a novice
                         at Wat Chedi Luang when I was approaching the age of 15. The reason is that four persons of my age,
                         who were also my relatives at Muang District, Lamphun Province, had come to stay at Wat Chedi Luang
                         before I came to reside here, the were determined to ordain as novices before the rain retreat,
