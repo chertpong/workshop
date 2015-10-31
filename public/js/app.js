@@ -6,6 +6,7 @@ angular.module('myApp', [
   'textAngular',
   'contentControllers',
   'pictureControllers',
+    'homeController',
   'pictureServices'
 
 ]).
