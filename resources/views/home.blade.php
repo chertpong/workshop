@@ -49,7 +49,7 @@
         <section id="history">
             <div class="row" id="history-div">
                 <div class="container" >
-                    <h1 id="history-head">History
+                    <h1>History
                         <ul class="nav navbar-nav navbar-right">
                             <li><button class="button button-circle button-tran hvr-fade" onclick="changeLanguageToTh()">TH</button></li>
                             <li><button class="button button-circle button-tran hvr-fade" onclick="changeLanguageToEn()">EN</button></li>
@@ -91,12 +91,17 @@
         </section>
 
         <section id="contents">
-            <div id="content-section-header" class="col-xs-12 col-md-8 col-md-offset-2"><h2>New content</h2></div>
+            <div class="row" id="contactrow" >
+                <h1 class="whitetext">New Content</h1>
+                <hr>
+            </div>
+            <div class="container">
             <div ng-repeat="content in contents track by $index">
                 <div id="[[content +$index]]" class="panel panel-default">
                     <div class="panel-heading">[[content.title]]</div>
                     <div class="panel-body" ng-bind-html="[[content.content]]"></div>
                 </div>
+            </div>
             </div>
         </section>
 
@@ -108,8 +113,8 @@
                     <hr>
                 </div>
                 <div class="row" id="maprow">
-                    <div class="center-block" id="map">
-                        <iframe width="600" height="450" frameborder="0" style="border:0"
+                    <div class="container" >
+                        <iframe width=1200" height="600" frameborder="0" style="border:0"
                                 src="https://www.google.com/maps/embed/v1/place?q=%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87&key=AIzaSyBWppfyH4eapU66D_diyK5b6XeWfHDZRd0&zoom=17" allowfullscreen></iframe>
                     </div>
                 </div>
