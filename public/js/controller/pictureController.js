@@ -26,8 +26,8 @@ pictureControllers.controller('mainPictureController',['$scope','$http','$locati
 
         $scope.delete = function(target){
             if(confirm('Do you really want to delete?')){
-                $http.delete(
-                    $location.absUrl()+'/'+target+'/delete'
+                $http.post(
+                    $location.absUrl()+'/'+target+'/delete',{_method:'DELETE'}
                 ).then(
                     function successCallback(response){
                         $scope.pictures.forEach(function (e,i,a) {
@@ -43,10 +43,70 @@ pictureControllers.controller('mainPictureController',['$scope','$http','$locati
                             $('<div class="alert alert-success" role="alert">Success!</div>').appendTo(".alert-msg").fadeOut(5000);
                         }
                         else {
-                            //TODO : Fix bug error 405
                             console.log(response.status);
-                            //remove this later
+                            $('<div class="alert alert-danger" role="alert">ERROR!</div>').appendTo(".alert-msg").fadeOut(5000);
+                        }
+                        $scope.pictures.forEach(function (e,i,a) {
+                            if(e.id == target){
+                                a.splice(i,1);
+                            }
+                            console.log($scope.pictures);
+                        });
+                    }
+                );
+            }
+        };
+        $scope.copy = function(id){
+            try {
+                document.querySelector('#'+id).select();
+                var successful = document.execCommand('copy');
+                if(successful){
+                    $('<div class="alert alert-success" role="alert">Successfully copy to clipboard!</div>').appendTo(".alert-msg").fadeOut(5000);
+                }
+            } catch (err) {
+                $('<div class="alert alert-danger" role="alert">Cannot copy! please do it manually!!</div>').appendTo(".alert-msg").fadeOut(5000);
+            }
+        }
+    }
+]);
+
+pictureControllers.controller('embeddedPictureController',['$scope','$http','$location',
+    function($scope,$http,$location){
+        $scope.pictures = [];
+        $scope.path = $location.absUrl();
+        $http
+            .get(($location.host()+'/../api/pictures'))
+            .then(
+            function successCallback(response){
+                $scope.pictures =response.data;
+            },
+            function errorCallback(response){
+                $('<div class="alert alert-danger" role="alert">Error cannot load pictures!</div>').appendTo(".alert-msg").fadeOut(5000);
+            }
+        );
+
+
+        $scope.delete = function(target){
+            if(confirm('Do you really want to delete?')){
+                $http.post(
+                    $location.absUrl()+'/'+target+'/delete',{_method:'DELETE'}
+                ).then(
+                    function successCallback(response){
+                        $scope.pictures.forEach(function (e,i,a) {
+                            if(e.id == target){
+                                a.splice(i,1);
+                            }
+                            console.log($scope.pictures);
+                        });
+                        $('<div class="alert alert-success" role="alert">Success!</div>').appendTo(".alert-msg").fadeOut(5000);
+                    },
+                    function errorCallback(response){
+                        if(response.status == '302'){
                             $('<div class="alert alert-success" role="alert">Success!</div>').appendTo(".alert-msg").fadeOut(5000);
+                        }
+                        else {
+                            console.log(response.status);
+                            $('<div class="alert alert-danger" role="alert">ERROR!</div>').appendTo(".alert-msg").fadeOut(5000);
                         }
                         $scope.pictures.forEach(function (e,i,a) {
                             if(e.id == target){

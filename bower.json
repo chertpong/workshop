@@ -25,6 +25,7 @@
     "angular-carousel": "~1.0.1",
     "hover": "~2.0.2",
     "Buttons": "~2.0.0",
-    "textAngular": "~1.4.6"
+    "textAngular": "~1.4.6",
+    "angular-bootstrap": "~0.14.3"
   }
 }

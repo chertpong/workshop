@@ -106,7 +106,7 @@ class ContentController extends Controller
         $content->user_id = Auth::user()->id;
         $content->save();
 
-        return redirect('contents/'.$id);
+        return url('contents/'.$content->id);
     }
 
     /**
@@ -120,5 +120,13 @@ class ContentController extends Controller
         Content::find($id)->delete();
         Log::info('content id:'.$id.' is deleted by user id:'.Auth::user()->id);
         return redirect('contents');
+    }
+
+    public function apiGet($id){
+        return Content::findOrFail($id)->toJson();
+    }
+
+    public function apiLastRecent($numberOfContent){
+        return Content::orderBy('created_at','desc')->limit($numberOfContent)->get()->toJson();
     }
 }

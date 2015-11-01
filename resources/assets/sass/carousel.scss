@@ -1,0 +1,55 @@
+#mainslide{
+  background-color: rgba(0,0,0,0.7);
+
+}
+#slidediv{
+  margin-top:-80px ;
+  background-color: rgba(0,0,0,0.7);
+  padding-top: 90px;
+  padding-bottom: 20px;
+}
+/*  Slide Fade Animation */
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+.brownshadow{
+  -webkit-box-shadow: 0px 1px 13px 3px rgba(160,82,45,1);
+  -moz-box-shadow: 0px 1px 13px 3px rgba(160,82,45,1);
+  box-shadow: 0px 1px 13px 3px rgba(160,82,45,1);
+}
+
+.button {
+  background-color: transparent !important;
+}
+.fit{
+  width: 50%;
+}
+.carousel-indicators .active {
+  background-color: #FF7600;
+}
+
+#headnav{
+  margin-right: 90px;
+  margin-left: 90px;
+}
