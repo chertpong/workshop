@@ -31,21 +31,14 @@
                 <li ><a id="button2" href="{{ url('/contents') }}">Content</a></li>
                 <li ><a id="button3" href="{{ url('/').'/#contact' }}">Contact</a></li>
                 @if(Auth::check())
-                    <ul class="nav navbar-nav">
-                        <li><a href={{url('contents/create')}} class="hvr-underline-from-left">Create content</a></li>
-                        <li><a href={{url('pictures')}} class="hvr-underline-from-left">Manage pictures</a></li>
-                    </ul>
+                        <li class="pull-right"><a href={{url('contents/create')}} >Create content</a></li>
+                        <li class="pull-right"><a href={{url('pictures')}} >Manage pictures</a></li>
                 @endif
                 @if (Auth::guest())
                     <li id="button4" class="pull-right"><a  id=button4" href="{{ url('/auth/login') }}">Sign in</a></li>
                     {{--<li><a href={{url('auth/register')}}>Register</a></li>--}}
                 @else
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle hvr-underline-from-left" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href={{url('auth/logout')}}>Logout</a></li>
-                        </ul>
-                    </li>
+                            <li class="pull-right"><a id="button5" href={{url('auth/logout')}}>Logout</a></li>
                 @endif
             </ul>
 

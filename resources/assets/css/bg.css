@@ -3,3 +3,16 @@ html,body{
     background-size: cover;
     height: 100%;
 }
+#contents{
+    background-color: rgba(0,0,0,0.7);
+    margin: 90px 0px 90px 0px;
+    padding-bottom: 90px;
+}
+.whitetext {
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    color: white;
+    font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+}
