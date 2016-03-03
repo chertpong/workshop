@@ -1,3 +1,7 @@
+# Workshop - by kritcg
+This project used to be base project for my workshop session.
+Now it's for SE301 course instead
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
